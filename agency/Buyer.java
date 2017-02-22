@@ -44,6 +44,7 @@ public class Buyer extends Client {
 			this.agency.setBudget(this.agency.getBudget() + (commission));
 			this.agent.setDealsMoney(this.agent.getDealsMoney() + (commission));
 			this.money -= est.getPrice();
+			this.agency.getCatalog().get(est.getEstateType()).remove(est);
 		}
 		else {
 			System.out.println(this.getName() + " was not able to view a single estate!");

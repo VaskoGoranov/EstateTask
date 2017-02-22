@@ -26,8 +26,7 @@ public class Agent {
 	public String toString() {
 		return name + ", phone: " + phone + ", money from deals: " + dealsMoney;
 	}
-
-
+	
 	public HashSet<Buyer> getBuyers() {
 		return buyers;
 	}

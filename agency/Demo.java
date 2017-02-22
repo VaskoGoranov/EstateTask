@@ -2,6 +2,7 @@ package agency;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.TreeSet;
 
 import estates.Apartment;
 import estates.Estate;
@@ -100,6 +101,17 @@ public class Demo {
 			buyers.get(i).buyEstate();
 		}
 		
+		//printing agency's balance
+		System.out.println("Agency balance is: " + agency.getBudget());
+		
+		//sorting agents
+		TreeSet<Agent> sorted = new TreeSet<>(new CompareByMoney());
+		sorted.addAll(fiveAgents);
+		for (Agent a : sorted) {
+			System.out.println(a.toString());
+		}
+		
+		agency.printInfo();
 		
 	}
 
